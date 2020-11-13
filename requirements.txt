@@ -1,3 +1,4 @@
-tabview==1.4.4
-pymongo==3.11.0
+pandas==1.1.4
 inquirer==2.7.0
+tabview==1.4.4
+jakesutils==0.2
