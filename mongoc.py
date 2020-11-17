@@ -12,25 +12,25 @@ class DatabaseReader:
         self.database.connect()
         self.client = self.database.client
 
-    def get_databases(self) -> list:
+    def get_databases(self):
         """Return all database names"""
         return self.client.list_database_names()
 
-    def get_collections(self, database: str) -> list:
+    def get_collections(self, database: str):
         """Return all collections in given database"""
         return self.client[database].list_collection_names()
 
-    def get_documents(self, database: str, collection: str) -> list:
+    def get_documents(self, database: str, collection: str):
         """Return all documents in the collection passed in"""
         return self.client[database][collection].find({})
 
-    def ask_question(self, items: list) -> str:
+    def ask_question(self, items: list):
         """List items and ask for selection"""
         questions = [inquirer.List('size', choices=items)]
         answers = inquirer.prompt(questions)
         return answers['size']
 
-    def get_user_requested_documents(self) -> list:
+    def get_user_requested_documents(self):
         """Get the documents from the collection and database, the user requested"""
         database = self.ask_question(self.get_databases())
         collection = self.ask_question(self.get_collections(database))
