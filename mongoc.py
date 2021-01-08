@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 from jakesutils.database import Database
-import pandas as pd
 import inquirer
 from os import system
 import tabview
@@ -55,6 +54,7 @@ class DatabaseReader:
 def main():
     dbr = DatabaseReader()
     dbr.render_table()
+
 
 if __name__ == "__main__":
     main()
