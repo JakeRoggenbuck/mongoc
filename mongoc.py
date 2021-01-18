@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from jakesutils.database import Database
 import inquirer
-from os import system
 import tabview
 
 
