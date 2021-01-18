@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='mongoc',
-    version='0.3',
+    version='0.4',
     description='A fast way to view databases, collections and documents from mongodb in the command line',
     long_description=long_description,
     long_description_content_type="text/markdown",
